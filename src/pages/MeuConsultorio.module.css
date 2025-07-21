@@ -1,0 +1,24 @@
+.container {
+  padding: 2rem;
+  background-color: var(--cor-fundo-secao);
+  border-radius: var(--raio-borda);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.container h1 {
+  color: var(--cor-primaria);
+  border-bottom: 2px solid var(--cor-borda);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.videoPlaceholder {
+  margin-top: 2rem;
+  border: 2px dashed var(--cor-borda);
+  border-radius: var(--raio-borda);
+  padding: 4rem;
+  text-align: center;
+  color: #718096;
+  background-color: var(--cor-fundo);
+}

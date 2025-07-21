@@ -1,0 +1,147 @@
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: var(--cor-fundo-secao);
+  padding: 2rem 1rem;
+  border-right: 1px solid var(--cor-borda);
+  position: fixed; /* Fica fixo na tela */
+  top: 70px; /* Altura do Header. Ajuste se necessário. */
+  left: 0;
+  height: calc(100vh - 70px); /* Altura da tela menos o Header */
+  box-sizing: border-box;
+  overflow-y: auto; /* Adiciona scroll se o conteúdo da sidebar for grande */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  width: 100%;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  border-radius: var(--raio-borda);
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: 500;
+  width: 100%;
+}
+
+.navLink:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+}
+
+.navLink.active {
+  background-color: var(--cor-primaria);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 90, 156, 0.2);
+}
+
+.navLink svg {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.sidebarSectionButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  border-radius: var(--raio-borda);
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: 500;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  text-align: left;
+}
+
+.sidebarSectionButton:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+}
+
+.sidebarSectionButton .chevron {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebarSectionButton .chevron.open {
+  transform: rotate(180deg);
+}
+
+.sidebarSectionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  padding-left: 1rem;
+}
+
+.sidebarSectionContent.open {
+  max-height: 500px; /* Ajuste conforme necessário */
+  transition: max-height 0.5s ease-in;
+}
+
+.calendar {
+  margin: 0.5rem auto;
+  --rdp-accent-color: var(--cor-primaria);
+  --rdp-background-color: var(--cor-fundo);
+}
+
+.recadosList {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recadoItem {
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+}
+
+.recadoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.pacienteNome {
+  font-weight: 600;
+}
+
+.dataHora {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.recadoBody {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--cor-borda);
+  color: #4a5568;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

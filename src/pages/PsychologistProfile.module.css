@@ -1,0 +1,47 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #2d3748;
+}
+
+.container h1 {
+  color: #1a202c;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.crp {
+  font-style: italic;
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.specialties {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.specialties li {
+  background-color: #e2e8f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #c53030;
+  font-weight: bold;
+}

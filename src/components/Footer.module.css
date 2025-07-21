@@ -1,0 +1,22 @@
+.footer {
+  padding: 2rem;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  margin-top: auto;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Para telas menores */
+  gap: 1rem; /* Espaçamento entre os itens */
+}
+
+.developerCredit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaço entre "Desenvolvido por" e o logo */
+}
+
+.developerCredit span {
+  font-weight: 500;
+}

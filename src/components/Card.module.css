@@ -1,0 +1,44 @@
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1f2937; /* Um cinza mais escuro para o título */
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  flex-grow: 1; /* Faz o parágrafo ocupar o espaço disponível */
+  color: #4b5563; /* Cinza médio para o texto */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  align-self: flex-start; /* Alinha o link no início do eixo transversal */
+  cursor: pointer;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}

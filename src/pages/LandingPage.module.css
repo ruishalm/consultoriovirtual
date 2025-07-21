@@ -1,0 +1,214 @@
+.pageWrapper {
+  width: 100%;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.lightSection {
+  background-color: #ffffff;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 2rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0; /* Um cinza bem claro, quase branco */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ctaButton {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.section p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.placeholder {
+  background-color: #e2e8f0;
+  padding: 4rem;
+  border-radius: 8px;
+  color: #4a5568;
+  font-style: italic;
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+}
+
+.ctaSection {
+  background-color: #1f2937;
+}
+
+.ctaSection h2 {
+  color: white;
+}
+
+.ctaSection p {
+  color: #d1d5db;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 10px;
+  transition: background-color 0.2s ease;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+
+.signOutButton {
+  background-color: #6c757d !important;
+}
+
+.signOutButton:hover {
+  background-color: #5a6268 !important;
+}
+
+.psychologistsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px; /* Limita a largura da grade */
+  margin: 2rem auto 0; /* Centraliza a grade na página */
+}
+
+.psychologistCard {
+  background-color: var(--cor-fundo-secao);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-borda);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--sombra-padrao);
+}
+
+.psychologistCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.psychologistPhoto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid var(--cor-primaria);
+  padding: 3px;
+  background-color: var(--cor-fundo);
+}
+
+.psychologistCard h3 {
+  color: var(--cor-secundaria);
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.crp {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.specialties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.specialtyTag {
+  background-color: var(--cor-fundo);
+  color: var(--cor-secundaria);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--cor-borda);
+}
+
+.profileLink {
+  /* Reset button styles */
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  /* End reset */
+
+  margin-top: auto;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--cor-primaria);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--raio-borda);
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.profileLink:hover {
+  background-color: #004a80;
+  transform: scale(1.05);
+}

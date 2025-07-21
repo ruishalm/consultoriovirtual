@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Função para verificar se o usuário que faz a requisição é um gerente
+    function isManager() {
+      return exists(/databases/$(database)/documents/managers/$(request.auth.uid));
+    }
+
+    // Regras para a coleção de gerentes
+    match /managers/{userId} {
+      // Qualquer usuário autenticado pode tentar ler um documento de gerente específico (necessário para a verificação de papel no AuthContext).
+      // A segurança vem do fato de que eles só podem adivinhar o próprio UID.
+      allow get: if request.auth != null;
+      // Apenas gerentes podem listar todos os gerentes ou criar/atualizar outros.
+      allow list, write: if isManager();
+    }
+
+    // Regras para a coleção de psicólogos
+    match /psychologists/{userId} {
+      // Qualquer pessoa (logada ou não) pode ver os perfis dos psicólogos
+      allow read;
+      // Apenas gerentes podem criar, atualizar ou deletar perfis de psicólogos
+      allow write: if isManager();
+    }
+  }
+}
